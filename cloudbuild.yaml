@@ -1,0 +1,15 @@
+steps:
+  # Build & push your Docker image
+  - name: gcr.io/cloud-builders/docker
+    args:
+      [
+        "build",
+        "--no-cache",               # force a 100% fresh rebuild
+        "-f", "Dockerfile",
+        "-t", "gcr.io/$PROJECT_ID/fastapi-app",
+        "."
+      ]
+
+images:
+  # tell Cloud Build to push this image once it’s built
+  - "gcr.io/$PROJECT_ID/fastapi-app"
