@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+requests
+python-dotenv
+PyJWT
+pydantic
+pydantic-settings
+cryptography>=40.0.0
+PyJWT[crypto]>=2.8.0
