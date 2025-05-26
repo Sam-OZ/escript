@@ -7,15 +7,11 @@ from app.routers.pbs_pricing_router   import router as pbs_pricing_router
 from app.routers.wsd_pricing_router   import router as wsd_pricing_router
 
 app = FastAPI(
-    title=settings.app_name,
-    description=settings.description,
-    version=settings.version,
-    docs_url="/",            # Swagger UI at "/"
-    redoc_url=None,          # disable ReDoc (or pick another path)
-    openapi_url="/openapi.json"
-)
-
-
+    title="Medication + Pricing API",
+    docs_url="/",
+    redoc_url=None,
+    openapi_url="/openapi.json",
+    )
 app.include_router(prescription_router)
 app.include_router(pbs_pricing_router)
 app.include_router(wsd_pricing_router)
