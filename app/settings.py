@@ -6,9 +6,7 @@ class Settings(BaseSettings):
     # Identity server token endpoint (direct)
     token_url: AnyHttpUrl = Field(..., env="TOKEN_URL")
     # API version
-    app_name: str = "Televita API"
-    description: str = "Telehealth prescription & pricing service"
-    version: str = "0.1.0"
+    
 
     # OAuth2 client credentials
     client_id: str = Field(..., env="CLIENT_ID")
